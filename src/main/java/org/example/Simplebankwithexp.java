@@ -37,7 +37,8 @@ class BankAcc
 
         LOGGER.log(Level.INFO,"Enter amount to deposit:");
         double amt = input.nextDouble();
-        LOGGER.log(Level.INFO,"Deposit of Amount RS "+amt+" is successful\n\n");
+        String res1="Deposit of Amount RS "+amt+" is successful";
+        LOGGER.log(Level.INFO,res);
         balance=balance+amt;
     }
     void withdrawl()
@@ -48,8 +49,9 @@ class BankAcc
 
         if(amt<balance)
         {
+            String res2="WithDrawl of Amount RS "+amt+" is successful";
             balance=balance-amt;
-            LOGGER.log(Level.INFO,"WithDrawl of Amount RS "+amt+" is successful\n\n");
+            LOGGER.log(Level.INFO,res2);
 
 
         }
@@ -61,10 +63,14 @@ class BankAcc
     }
     void cbalance()
     {
+        String br1="Account Name:"+name;
+        String br2="Account Number:"+accno;
+        String br3="Balance Amount:"+balance;
+         
 
-        LOGGER.log(Level.INFO, "Account Name:"+name);
-        LOGGER.log(Level.INFO,"Account Number:"+accno);
-        LOGGER.log(Level.INFO,"Balance Amount:"+balance);
+        LOGGER.log(Level.INFO, br1);
+        LOGGER.log(Level.INFO,br2);
+        LOGGER.log(Level.INFO,br3);
 
 
     }
