@@ -38,7 +38,7 @@ class BankAcc
         LOGGER.log(Level.INFO,"Enter amount to deposit:");
         double amt = input.nextDouble();
         String res1="Deposit of Amount RS "+amt+" is successful";
-        LOGGER.log(Level.INFO,res);
+        LOGGER.log(Level.INFO,res1);
         balance=balance+amt;
     }
     void withdrawl()
