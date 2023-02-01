@@ -28,7 +28,7 @@ class BankAcc
         }
         catch (Exception e)
         {
-            LOGGER.log(Level.INFO,""+e);
+            LOGGER.log(Level.INFO,"please provide needed things");
         }
     }
 
