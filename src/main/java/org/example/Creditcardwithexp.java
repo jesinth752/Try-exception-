@@ -68,10 +68,13 @@ public class Creditcardwithexp {
             String cno = String.valueOf(clone.cardno);
 
             if (res.equals("true")) {
+                String pr="Card Holder name :"+clone.holdername;
                 LOGGER.info("Creating new Credit card...");
-                LOGGER.info("Card Holder name :" + clone.holdername);
-                LOGGER.info("Card Number:{}" + cno);
-                LOGGER.info("Card Expiration date:{}" + clone.expirationdate);
+                LOGGER.info(pr);
+                String pr1="Card Number:" + cno;
+                LOGGER.info(pr1);
+                String pr2="Card Expiration date:" + clone.expirationdate;
+                LOGGER.info(pr2);
             } else {
                 LOGGER.info("CARD NOT FOUND try again later");
             }
