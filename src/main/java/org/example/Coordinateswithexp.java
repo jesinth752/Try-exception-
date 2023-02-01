@@ -3,7 +3,7 @@ package org.example;
 import java.util.logging.Logger;
 import java.util.Scanner;
 
-class Points implements Cloneable{
+class Points {
     int x1;
     int y1;
 
@@ -14,6 +14,12 @@ class Points implements Cloneable{
         this.y1=y1;
 
     }
+    Points(Points pnt)
+    {
+     x1=pnt.x1;
+     y1=pnt.y1;
+    
+    }
     boolean checkequals(int x2,int y2)
     {
 
@@ -21,15 +27,12 @@ class Points implements Cloneable{
 
     }
 
-    public Object clone() throws  CloneNotSupportedException
-    {
-        return  super.clone();
-    }
+   
 }
 public class Coordinateswithexp {
 
     private static final Logger LOGGER = Logger.getLogger("InfoLogging");
-    public static void main(String[] args) throws CloneNotSupportedException{
+    public static void main(String[] args) {
         int x1;
         int y1;
         int x2;
@@ -41,7 +44,7 @@ public class Coordinateswithexp {
             LOGGER.info("Enter y1");
             y1 = input.nextInt();
             Points p = new Points(x1, y1);
-            Points p1 = (Points) p.clone();
+            Points p1 = new Point(p);
             LOGGER.info("Enter x2:");
             x2 = input.nextInt();
             LOGGER.info("Enter Y2");
